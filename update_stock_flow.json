@@ -1,0 +1,22 @@
+{
+  "step_1": {
+    "question": "Выберите товар",
+    "type": "search_product"
+  },
+  "step_2": {
+    "question": "Выберите вкус",
+    "type": "select_variant"
+  },
+  "step_3": {
+    "question": "Введите новое количество",
+    "type": "input_number"
+  },
+  "step_4": {
+    "question": "Подтвердить обновление?",
+    "type": "confirm",
+    "buttons": [
+      "✅ Подтвердить",
+      "❌ Отмена"
+    ]
+  }
+}

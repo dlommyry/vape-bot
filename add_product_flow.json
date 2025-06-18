@@ -1,0 +1,38 @@
+{
+  "step_1": {
+    "question": "Выберите категорию",
+    "type": "choice",
+    "options": [
+      "Одноразовые",
+      "Многоразовые",
+      "Жидкости",
+      "Разное"
+    ]
+  },
+  "step_2": {
+    "question": "Введите название товара",
+    "type": "input_text",
+    "check_existing": true
+  },
+  "step_3": {
+    "question": "Введите вкус или разновидность",
+    "type": "input_text"
+  },
+  "step_4": {
+    "question": "Введите количество на складе",
+    "type": "input_number"
+  },
+  "step_5": {
+    "question": "Введите описание товара",
+    "type": "input_text",
+    "optional": true
+  },
+  "step_6": {
+    "question": "Сохранить товар?",
+    "type": "confirm",
+    "buttons": [
+      "✅ Да",
+      "❌ Отмена"
+    ]
+  }
+}
