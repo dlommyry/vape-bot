@@ -1,4 +1,3 @@
-
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
@@ -24,10 +23,13 @@ async def support(message: types.Message):
 
 @dp.message_handler(lambda message: message.text == "🛍 Каталог")
 async def catalog(message: types.Message):
-    await message.answer("Выберите категорию:
-1️⃣ В наличии
-2️⃣ Нет в наличии
-(Категории скоро будут активны)")
+    text = (
+        "Выберите категорию:\n"
+        "1️⃣ В наличии\n"
+        "2️⃣ Нет в наличии\n"
+        "(Категории скоро будут активны)"
+    )
+    await message.answer(text)
 
 @dp.message_handler(lambda message: message.text == "🧺 Корзина")
 async def cart(message: types.Message):
