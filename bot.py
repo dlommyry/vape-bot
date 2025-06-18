@@ -19,7 +19,7 @@ async def start(message: types.Message):
 
 @dp.message_handler(lambda message: message.text == "📞 Поддержка")
 async def support(message: types.Message):
-    await message.answer("Для связи с поддержкой: @PlumbusSupport")
+    await message.answer("Для связи с поддержкой: @plumbus_support")
 
 @dp.message_handler(lambda message: message.text == "🛍 Каталог")
 async def catalog(message: types.Message):
