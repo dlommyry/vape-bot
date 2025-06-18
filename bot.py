@@ -105,3 +105,7 @@ async def show_stock(message: types.Message):
     cursor.execute("SELECT name, quantity FROM products")
     text = "\n".join(f"{name}: {qty}" for name, qty in cursor.fetchall())
     await message.answer("📦 Склад:\n" + text)
+
+if __name__ == "__main__":
+    from aiogram import executor
+    executor.start_polling(dp, skip_updates=True)
