@@ -1,3 +1,12 @@
+import asyncio
+
+async def on_startup(dp):
+    print("Bot started.")
+
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    loop.create_task(on_startup(dp))
+    executor.start_polling(dp, skip_updates=True)
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
