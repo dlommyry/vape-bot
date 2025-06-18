@@ -1,12 +1,3 @@
-import asyncio
-
-async def on_startup(dp):
-    print("Bot started.")
-
-if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.create_task(on_startup(dp))
-    executor.start_polling(dp, skip_updates=True)
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
@@ -118,3 +109,10 @@ async def show_stock(message: types.Message):
 if __name__ == "__main__":
     from aiogram import executor
     executor.start_polling(dp, skip_updates=True)
+
+async def on_startup(dispatcher):
+    print("✅ Bot started.")
+
+if __name__ == "__main__":
+    from aiogram import executor
+    executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
