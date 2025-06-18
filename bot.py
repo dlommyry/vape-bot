@@ -71,9 +71,9 @@ async def view_product(callback: types.CallbackQuery):
             markup.add(InlineKeyboardButton("🛒 В корзину", callback_data=f"buy:{name}"))
         else:
             markup.add(InlineKeyboardButton("🔔 Уведомить при наличии", callback_data=f"wait:{name}"))
-        await callback.message.answer(f"📝 {name}
+        await callback.message.answer(f"""📝 {name}
 {description}
-Остаток: {qty}", reply_markup=markup)
+Остаток: {qty}""", reply_markup=markup)
 
 @dp.callback_query_handler(lambda c: c.data.startswith("buy:"))
 async def add_to_cart(callback: types.CallbackQuery):
