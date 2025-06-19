@@ -216,5 +216,5 @@ async def back_admin(m: types.Message):
     await m.answer("Админ-меню", reply_markup=admin_kb)
 
 # ─────────────────────── запуск ───────────────────────
-if __name__=="__main__":
-    executor.start_polling	dp, skip_updates=True)
+if __name__ == "__main__":
+    executor.start_polling(dp, skip_updates=True)
