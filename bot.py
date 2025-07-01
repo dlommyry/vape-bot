@@ -263,5 +263,10 @@ async def finish_product(d,m,one_fl="default",one_q=0):
     await dp.current_state(chat=m.chat.id,user=m.from_user.id).finish()
 
 # ──────────── run ───────────────────────
+@dp.callback_query_handler(lambda c: True, state="*")
+async def _debug_all_callbacks(c: types.CallbackQuery):
+    logging.warning(f"CALLBACK {c.data!r} от {c.from_user.id}")
+    await dp.skip_updates()   # передаём дальше к другим хэндлерам
+
 if __name__ == "__main__":
     executor.start_polling(dp,skip_updates=True)
